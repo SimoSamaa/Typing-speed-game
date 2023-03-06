@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed</title>
+    <link rel="icon" href="./src/asset/logo/logo-white.png">
+    <link rel="stylesheet" href="./dist/css/main-style.css">
+    <script defer src="./dist/js/main-script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./src/asset/logo/logo-white.png" alt="logo">
+            <strong>Typing Speed</strong>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn-score tran-300">
+                <img src="./src/asset/icon-App/score-icon.svg" alt="">
+            </button>
+
+            <div class="check-score tran-500">
+                <div class="date">
+                    <div>level <span>easy</span> score <span class="last-score-easy">0</span> from <span>10</span></div>
+                    <div class="date-one"></div>
+                </div>
+                <div class="date">
+                    <div>level <span>normal</span> score <span class="last-score-normal">0</span> from <span>20</span>
+                    </div>
+                    <div class="date-two"></div>
+                </div>
+                <div class="date">
+                    <div>level <span>hard</span> score <span class="last-score-hard">0</span> from <span>20</span>
+                    </div>
+                    <div class="date-three"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="app">
+        <div class="lvl-bar">
+            <div class="select-lvl">
+                <label for="lvl">level</label>
+                <div class="main-select">
+                    <img src="./src/asset/icon-App/chevron.svg" alt="chevron">
+                    <select id="lvl" class="tran-300">
+                        <option value="Easy" selected>Easy</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="lvl-seconds">
+                <span></span>
+                seconds
+            </div>
+        </div>
+
+        <button class="btn-start tran-300">start test</button>
+
+        <div class="the-word tran-300"></div>
+
+        <div class="write-word">
+            <input id="typing" type="text" class="tran-300" placeholder="start typing">
+            <label for="typing" class="tran-300">start typing...</label>
+            <img src="./src/asset/icon-App/keyboard.svg" alt="keyboard">
+        </div>
+
+        <div class="upcoming-words tran-300"></div>
+
+        <div class="end-bar">
+            <div class="timing">
+                time left: <span class="seconds"><span>s</span>s</span>
+            </div>
+
+            <div class="score-container">
+                score <span class="score" id="zaba">0</span> from <span class="from">30</span>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your
+                score will reset.</p>
+        </div>
+    </main>
+</body>
+
+</html>

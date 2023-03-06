@@ -1,0 +1,31 @@
+@use './colors' as *;
+
+@mixin colorsApp() {
+
+    @each $color,
+    $value in $colors {
+        --clr-#{$color}: #{$value};
+    }
+}
+
+@mixin flexOption($flex, $size, $center, $space) {
+    display: $flex;
+    gap: $size;
+    align-items: $center;
+    justify-content: $space;
+}
+
+@mixin positionOption($pos, $y, $x, $-x) {
+    position: $pos;
+    top: $y;
+    right: $x;
+    left: $-x;
+}
+
+@mixin breakPointe($phone) {
+    @if($phone ==mobile) {
+        @media (max-width:500px) {
+            @content;
+        }
+    }
+}
